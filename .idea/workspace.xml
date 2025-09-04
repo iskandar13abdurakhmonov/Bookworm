@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c01240-be65-4828-ad0d-952e6740c12c" name="Changes" comment="cron commit">
-      <change afterPath="$PROJECT_DIR$/mobile/app/(tabs)/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/app/(tabs)/create.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/app/(tabs)/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/app/(tabs)/profile.tsx" afterDir="false" />
+    <list default="true" id="e0c01240-be65-4828-ad0d-952e6740c12c" name="Changes" comment="create ui screen">
+      <change afterPath="$PROJECT_DIR$/mobile/components/Loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobile/constants/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobile/lib/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/app/(auth)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/(auth)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/store/authStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/store/authStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/BookRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/BookRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/app/(tabs)/create.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/(tabs)/create.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/(tabs)/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,40 +50,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files/Bookworm",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\Bookworm\\mobile\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Bookworm&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\Bookworm\\mobile\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Program Files\projects\Bookworm\backend\src" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Bookworm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Bookworm" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -114,7 +96,8 @@
       <workItem from="1756872872108" duration="11000" />
       <workItem from="1756872889661" duration="488000" />
       <workItem from="1756873450447" duration="17000" />
-      <workItem from="1756873585697" duration="17207000" />
+      <workItem from="1756873585697" duration="18963000" />
+      <workItem from="1756954767083" duration="10098000" />
     </task>
     <task id="LOCAL-00001" summary="cron commit">
       <option name="closed" value="true" />
@@ -124,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756891246303</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create ui screen">
+      <option name="closed" value="true" />
+      <created>1756899166997</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756899166997</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cron commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="cron commit" />
+    <MESSAGE value="create ui screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="create ui screen" />
   </component>
 </project>

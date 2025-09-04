@@ -11,50 +11,34 @@ cloudinary.config({
 })
 
 const router = express.Router()
-const upload = multer({ dest: 'uploads/' })
 
-router.post('/', protectedRoute, upload.single('image'), async (req, res) => {
+router.post("/", protectedRoute, async (req, res) => {
     try {
-        console.log("User ID: ", req.user._id.toString())
-        console.log("Request body: ", req.body)
-        console.log("Uploaded file: ", req.file)
-        
-        const { title, caption, rating } = req.body
-        
-        if (!req.file) {
-            return res.status(400).json({ message: "Please upload an image file" })
+        const { title, caption, rating, image } = req.body;
+
+        if (!image || !title || !caption || !rating) {
+            return res.status(400).json({ message: "Please provide all fields" });
         }
-        
-        if (!title || !caption || !rating) {
-            return res.status(400).json({ message: "Please provide title, caption, and rating" })
-        }
-        
-        const result = await cloudinary.uploader.upload(req.file.path)
-        const imageUrl = result.secure_url
-        
+
+        const uploadResponse = await cloudinary.uploader.upload(image);
+        const imageUrl = uploadResponse.secure_url;
+
         const newBook = new Book({
             title,
             caption,
-            rating: Number(rating), 
+            rating,
             image: imageUrl,
-            user: req.user._id 
-        })
-        
-        await newBook.save()
-        
-        const response = {
-            ...newBook.toObject(),
-            _id: newBook._id.toString(),
-            user: newBook.user.toString()
-        }
-        
-        res.status(201).json(response)
-        
+            user: req.user._id,
+        });
+
+        await newBook.save();
+
+        res.status(201).json(newBook);
     } catch (error) {
-        console.log("Error: ", error)
-        res.status(500).json({ message: error.message })
+        console.log("Error creating book", error);
+        res.status(500).json({ message: error.message });
     }
-})
+});
 
 router.get('/', protectedRoute, async (req, res) => {
     try {
